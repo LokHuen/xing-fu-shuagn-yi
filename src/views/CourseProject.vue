@@ -4,8 +4,10 @@
       :height="this.height"
       :bannerList="this.bannerList"
     ></Banner>
+    <img src="@/assets/course-banner/course-icon02.png"/>
       <div class="project-box">
         <CourseTitle></CourseTitle>
+        <CourseInfo></CourseInfo>
     </div>
   </div>
 </template>
@@ -13,6 +15,7 @@
 <script>
 import CourseTitle from '../components/CourseTitle'
 import Banner from '../../router-admin/src/components/Banner'
+import CourseInfo from '../components/CourseInfo'
 export default {
   name: 'CourseProject',
   data() {
@@ -25,17 +28,24 @@ export default {
       ]
     }
   },
-  components: {Banner, CourseTitle}
+  components: {CourseInfo, Banner, CourseTitle}
 }
 </script>
 
 <style lang="less" scoped>
   #course-project {
     width: 100%;
+    text-align: center;
+
+    img {
+      width: 534px;
+      margin-top: 50px;
+    }
 
     .project-box {
       width: 1200px;
       margin: 0 auto;
+      display: flex;
     }
   }
 </style>
