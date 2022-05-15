@@ -7,6 +7,8 @@ import ParentingEducation from '@/views/ParentingEducation'
 import FamilyPeace from '@/views/FamilyPeace'
 import ChildSpeak from '@/views/ChildSpeak'
 import CourseProject from '@/views/CourseProject'
+import CourseItems from '../views/CourseItems'
+import ExpertGroup from '../views/ExpertGroup'
 
 Vue.use(VueRouter)
 
@@ -23,8 +25,8 @@ const router = new VueRouter({
       ] },
     { path: '/course', component: CourseProject,
       children: [
-        { path: 'items', component: SelfGrow },
-        { path: 'group', component: ParentingEducation }
+        { path: 'items', component: CourseItems},
+        { path: 'group', component: ExpertGroup }
       ] },
     { path: '/practice', component: HappyPage,
       children: [
@@ -32,6 +34,7 @@ const router = new VueRouter({
         { path: 'parenting', component: ParentingEducation },
         { path: 'family', component: FamilyPeace }
       ] },
+
   ]
 })
 // 全局前置守卫

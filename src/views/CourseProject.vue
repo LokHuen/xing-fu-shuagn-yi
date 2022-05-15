@@ -5,10 +5,7 @@
       :bannerList="this.bannerList"
     ></Banner>
     <img src="@/assets/course-banner/course-icon02.png"/>
-      <div class="project-box">
-        <CourseTitle></CourseTitle>
-        <CourseInfo></CourseInfo>
-    </div>
+    <router-view/>
   </div>
 </template>
 

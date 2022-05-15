@@ -1,10 +1,16 @@
 <template>
-$END$
+  <div id = "course-project">
+    <Banner></Banner>
+    <TeacherList></TeacherList>
+  </div>
 </template>
 
 <script>
+import Banner from '../../router-admin/src/components/Banner'
+import TeacherList from '../components/TeacherList'
 export default {
-name: "ExpertGroup"
+  name: 'ExpertGroup',
+  components: {TeacherList, Banner}
 }
 </script>
 
